@@ -14,10 +14,34 @@
   <header class="heade">
     <a class="logo" href="#">SAID</a>
     <nav class="navbar">
-      <a href="#serv">servisers</a>
-      <a href="#contact">contact me</a>
+      <div class="links">
+        <a href="#serv">servisers</a>
+        <a href="#contact">contact me</a>
+        <a href="#contact">project</a>
+      </div>
+      <div class="togg"><i class="fa-solid fa-bars hhh"></i></div>
+      <div class="menu">
+        <li><a href="#serv">servisers</a></li>
+        <li><a href="#contact">contact me</a></li>
+        <li><a href="#">project</a></li>
+      </div>
     </nav>
   </header>
+  <script>
+    const togg = document.querySelector('.togg')
+    const toggicon = document.querySelector('.togg i')
+    const droopmenu = document.querySelector('.menu')
+    togg.onclick = function () {
+      droopmenu.classList.toggle('open')
+      const isOpen = droopmenu.classList.contains('open')
+
+      toggicon.classList = isOpen
+      ? 'fa-solid fa-xmark'
+      : 'fa-solid fa-bars'
+      
+    }
+    
+  </script>
   <section class="main">
     <div>
       <h2>hello i'm <br><span>web devloper</span></h2>
